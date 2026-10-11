@@ -1,52 +1,54 @@
-# Drion — Business Management & Compliance Platform
+# StudySpace — Student Productivity Dashboard
 
-**Drion** is a SaaS (Software as a Service) platform designed to help businesses manage their documents, government compliance requirements, renewals, maintenance, and business operations in one organised workspace.
+**StudySpace** is a student productivity website designed to help students organise their studies, manage tasks, and build better study habits through a simple and organised dashboard.
 
 ## 🎯 Project Goal
 
-The goal of Drion is to simplify business management by providing an accessible, professional, and easy-to-use platform for businesses operating in India and the UAE.
+The goal of StudySpace is to create a central workspace where students can view their productivity information, manage tasks, and stay motivated throughout their academic journey.
 
 ## ✨ Key Features
 
-- **Country Selection:** Support for businesses operating in India and the UAE.
-- **Multilingual Interface:** Language options for India, with Arabic and English support for the UAE.
-- **Authentication Interface:** Sign-in and sign-up pages with country and role selection.
-- **Role-Based Dashboards:** Separate interfaces for business owners and maintenance managers.
-- **Document Management:** Organise important business documents.
-- **Renewal Tracking:** Help businesses track upcoming document renewals and compliance requirements.
-- **Maintenance Management:** Allow maintenance managers to communicate repair needs to business owners.
-- **Business Analytics:** Provide owners with revenue and expense graphs and percentage changes.
-- **Staff Management:** Support staff-related management features.
-- **FAQ Chatbot:** Help users find information about upcoming renewals, documents, and repair costs.
-- **Customisable Workspace:** A professional business dashboard inspired by modern desktop operating systems.
-- **Theme Support:** Dark and light modes.
-- **Responsive Design:** Aim to make the interface usable across different screen sizes.
+- **Productivity Dashboard:** A homepage displaying an overview of the student's workspace.
+- **Navigation Bar:** Navigate between Home, My Tasks, and About pages.
+- **Task Management:** Provide a dedicated page for organising study tasks.
+- **Task Organisation:** Build towards adding, viewing, and managing tasks.
+- **Motivation Section:** Display encouraging messages to help students stay focused.
+- **Statistics Section:** Build towards showing useful task and productivity statistics.
+- **Multi-Page Website:** Separate pages for the dashboard, tasks, and project information.
+- **Interactive Elements:** Use JavaScript to make buttons and other features functional.
+- **Modern Interface:** A clean layout with organised sections, cards, shadows, and hover effects.
+- **Responsive Design:** Aim to make the website usable on desktop, tablet, and mobile screens.
 
 ## 🛠️ Technology Stack
 
-- HTML — Page structure
-- CSS — Styling, layouts, animations, and responsive design
-- JavaScript — Interactions and application logic
-- Browser Local Storage — Client-side data persistence during development
+- HTML — Page structure and content
+- CSS — Colours, layouts, spacing, cards, and visual effects
+- JavaScript — Interactive elements and application functionality
+
+## 📁 Planned Project Structure
+
+```text
+StudySpace/
+├── index.html
+├── mytasks.html
+├── about.html
+└── README.md
+```
+
+Additional CSS or JavaScript files may be added as the project grows. If the project uses separate files for styling or scripting, include them in this structure.
 
 ## 🚀 Project Vision
 
-Drion aims to become an affordable business management and compliance platform that makes administrative work simpler for small and medium-sized businesses.
+StudySpace aims to become a useful and polished student productivity platform that makes it easier to organise schoolwork and maintain consistent study habits.
 
-The long-term vision is to develop a secure, reliable, and scalable SaaS product with real authentication, trusted data storage, accurate compliance information, and integrations with relevant services.
-
-## 🔒 Development Notes
-
-The current development version may use browser-based storage and simulated functionality. These are suitable for prototyping but are not a replacement for secure server-side authentication, protected databases, or production-grade security.
-
-Government compliance information and renewal requirements must be verified against official sources before being relied upon.
+Future improvements may include task priorities, deadlines, completion tracking, productivity statistics, saved tasks, and more advanced dashboard features.
 
 ## 📌 Project Status
 
 **Status:** In development.
 
-Drion is a long-term project focused on building a polished user experience and progressively adding reliable business-management functionality.
+StudySpace is being developed step by step while learning HTML, CSS, and JavaScript. Features will be added as the project progresses.
 
 ---
 
-*Built as an ambitious software project focused on business productivity, compliance management, and accessible technology.*
+*Built as a learning project focused on web development, student productivity, and practical software engineering.*
