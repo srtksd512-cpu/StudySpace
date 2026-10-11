@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+  <body>
+    <section>
+      <header>
+        <div class="headerboxpage2-1">
+          <h2 class="headerheadingpage2">StudySpace</h2>
+          <div class="headerboxpage2-2">
+            <button
+              class="headerhome"
+              onclick="window.location.href = 'index.html'"
+            >
+              Home
+            </button>
+
+            <button
+              class="headermytasks"
+              onclick="window.location.href = 'mytasks.html'"
+            >
+              My Tasks
+            </button>
+
+            <button
+              class="headerbaout"
+              onclick="window.location.href = 'about.html'"
+            >
+              About
+            </button>
+          </div>
+        </div>
+        <div class="accentlinepage2"></div>
+      </header>
+      <br />
+      <br />
+      <h1 class="mainheadingpage2">My Tasks</h1>
+      <br />
+      <br />
+      <p class="introparapage2">
+        Organise your work. Set priorities. Get things done.
+      </p>
+      <br />
+      <br />
+      <br />
+      <div class="taskformpage2page2">
+        <h2 class="addnewtaskheading">Add a New Task</h2>
+        <br />
+        <br />
+        <div class="addnewtaskpage2">
+          <br />
+          <br />
+          <label for="taskname">Task Name: </label>
+          <input id="taskname" type="text" placeholder="Enter your task name" />
+          <br />
+          <br />
+          <label for="subjectname">Subject: </label>
+          <input id="subjectname" type="text" placeholder="Enter the subject" />
+          <br />
+          <br />
+          <label for="duedate">Due date: </label>
+          <input id="duedate" type="date" placeholder="Due date" />
+          <br />
+          <br />
+          <label for="priority">Priority: </label>
+          <select id="priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+          <br />
+          <br />
+        </div>
+        <br />
+        <br />
+        <button onclick="addnewtaskbutton()">+ Add a New Task</button>
+        <br />
+        <p id="taskaddedtolistpara"></p>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+      <br />
+      <br />
+      <div class="totaltasklistcard">
+        <p class="totaltasklistpara">Total Tasks:</p>
+        <br />
+        <h2 id="totaltasklistheading"></h2>
+        <br />
+        <button onclick="showtotaltasksbutton()">Total Tasks</button>
+        <br />
+        <br />
+      </div>
+      <div class="showalltasks">
+        <br />
+        <h2 class="showalltasksheading">My Task List</h2>
+        <br />
+        <br />
+        <div id="showalltasks"></div>
+        <br />
+        <br />
+        <button onclick="showalltasksbutton()">Display All Tasks</button>
+        <br />
+        <br />
+      </div>
+      <br />
+      <footer class="footerpage2">
+        <br />
+        <p>StudySpace · Student Productivity Dashboard</p>
+        <br />
+      </footer>
+    </section>
+    <script>
+      function addnewtaskbutton() {
+        let tasknamevar = document.getElementById("taskname").value;
+        let subjectnamevar = document.getElementById("subjectname").value;
+        let duedatevar = document.getElementById("duedate").value;
+        let priorityvar = document.getElementById("priority").value;
+        let task = {
+          taskname: tasknamevar,
+          subject: subjectnamevar,
+          duedate: duedatevar,
+          priority: priorityvar,
+        };
+        tasks.push(task);
+        document.getElementById("taskaddedtolistpara").innerHTML =
+          "Task added!";
+      }
+      let tasks = [];
+      function showtotaltasksbutton() {
+        document.getElementById("totaltasklistheading").innerHTML =
+          tasks.length;
+      }
+      function showalltasksbutton() {
+        let output = "";
+        for (let i = 0; i < tasks.length; i++) {
+          output +=
+            "<div>" +
+            "<h2>Task: " +
+            tasks[i].taskname +
+            "</h2>" +
+            "<p>Subject: " +
+            tasks[i].subject +
+            "</p>" +
+            "<p>Due Date: " +
+            tasks[i].duedate +
+            "</p>" +
+            "<p>Priority: " +
+            tasks[i].priority +
+            "</p>" +
+            "</div>";
+        }
+        document.getElementById("showalltasks").innerHTML = output;
+      }
+    </script>
+  </body>
+  <head>
+    <title>My Tasks</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1b1428;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      section {
+        padding: 25px;
+      }
+
+      /* Header */
+
+      .headerboxpage2-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        background-color: #241a35;
+        border-radius: 12px;
+      }
+
+      .headerheadingpage2 {
+        color: white;
+        font-size: 26px;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      .headerboxpage2-2 {
+        display: flex;
+        gap: 15px;
+      }
+
+      .headerhome,
+      .headermytasks,
+      .headerbaout {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .headerhome:hover,
+      .headermytasks:hover,
+      .headerbaout:hover {
+        background-color: hotpink;
+        color: #1b1428;
+      }
+
+      .headermytasks {
+        color: pink;
+      }
+
+      .accentlinepage2 {
+        height: 4px;
+        background-color: hotpink;
+        margin-top: 12px;
+        border-radius: 5px;
+      }
+
+      /* Main heading */
+
+      .mainheadingpage2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .introparapage2 {
+        text-align: center;
+        color: lightgrey;
+        font-size: 16px;
+        margin-top: 0;
+      }
+
+      /* Add New Task card */
+
+      .addnewtaskpage2 {
+        background-color: #29203c;
+        padding: 20px;
+        border: 2px solid pink;
+        border-radius: 12px;
+        margin: 25px auto;
+        max-width: 700px;
+        transition: 0.3s;
+      }
+
+      .addnewtaskpage2:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+        transform: scale(1.01);
+      }
+
+      .addnewtaskheading {
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+        margin-top: 0;
+      }
+
+      label {
+        display: block;
+        color: lightgrey;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      input,
+      select {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #1b1428;
+        color: white;
+        border: 1px solid pink;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        margin-bottom: 12px;
+      }
+
+      input:focus,
+      select:focus {
+        outline: 2px solid hotpink;
+      }
+
+      /* Buttons */
+
+      button {
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .addnewtaskpage2 > button,
+      .totaltasklistcard button,
+      .showalltasks button {
+        background-color: pink;
+        color: #1b1428;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .addnewtaskpage2 > button:hover,
+      .totaltasklistcard button:hover,
+      .showalltasks button:hover {
+        background-color: hotpink;
+        transform: scale(1.03);
+      }
+
+      .taskaddedtolistpara {
+        color: lightgreen;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      /* Total Tasks card */
+
+      .totaltasklistcard {
+        background-color: #29203c;
+        padding: 20px;
+        border: 2px solid pink;
+        border-radius: 12px;
+        margin: 25px auto;
+        max-width: 700px;
+        transition: 0.3s;
+      }
+
+      .totaltasklistcard:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+        transform: scale(1.01);
+      }
+
+      .totaltasklistpara {
+        color: lightgrey;
+        font-size: 16px;
+      }
+
+      #totaltasklistheading {
+        color: pink;
+        font-size: 30px;
+        font-weight: 800;
+      }
+
+      /* My Task List card */
+
+      .showalltasks {
+        background-color: #29203c;
+        padding: 20px;
+        border: 2px solid pink;
+        border-radius: 12px;
+        margin: 25px auto;
+        max-width: 700px;
+        transition: 0.3s;
+      }
+
+      .showalltasks:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+        transform: scale(1.01);
+      }
+
+      .showalltasksheading {
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      #showalltasks > div {
+        background-color: #1b1428;
+        border: 1px solid #765078;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      #showalltasks h2 {
+        color: pink;
+        font-size: 20px;
+      }
+
+      #showalltasks p {
+        color: lightgrey;
+        font-size: 16px;
+      }
+
+      /* Footer */
+
+      .footerpage2 {
+        text-align: center;
+        color: lightgrey;
+        font-size: 14px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        border-top: 1px solid #765078;
+        margin-top: 40px;
+      }
+
+      /* Smaller screens */
+
+      @media (max-width: 600px) {
+        section {
+          padding: 12px;
+        }
+
+        .headerboxpage2-1 {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .headerboxpage2-2 {
+          gap: 5px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .addnewtaskpage2,
+        .totaltasklistcard,
+        .showalltasks {
+          padding: 15px;
+        }
+      }
+      .headerbaout {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .headerbaout:hover {
+        background-color: hotpink;
+        color: #1b1428;
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+</html>
