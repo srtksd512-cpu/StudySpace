@@ -71,7 +71,7 @@
         </div>
         <br />
         <br />
-        <button onclick="addnewtaskbutton()">+ Add a New Task</button>
+        <button class="addnewtaskbuttonpage2" onclick="addnewtaskbutton()">+ Add a New Task</button>
         <br />
         <p id="taskaddedtolistpara"></p>
         <br />
@@ -163,6 +163,7 @@
         background-color: #1b1428;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
       }
 
       section {
@@ -442,6 +443,25 @@
       }
 
       .headerbaout:hover {
+        background-color: hotpink;
+        color: #1b1428;
+        transform: scale(1.03);
+      }
+      * {
+        text-align: center;
+      }
+      .addnewtaskbuttonpage2 {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .addnewtaskbuttonpage2:hover {
         background-color: hotpink;
         color: #1b1428;
         transform: scale(1.03);
