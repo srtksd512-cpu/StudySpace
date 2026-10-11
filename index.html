@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+  <body>
+    <section>
+      <header>
+        <div class="headerpage1">
+          <h2 class="headingpage1">StudySpace</h2>
+          <div class="navbuttons">
+            <button
+              class="headerhome"
+              onclick="window.location.href = 'index.html'"
+            >
+              Home
+            </button>
+
+            <button
+              class="headermytasks"
+              onclick="window.location.href = 'mytasks.html'"
+            >
+              My Tasks
+            </button>
+
+            <button
+              class="headerbaout"
+              onclick="window.location.href = 'about.html'"
+            >
+              About
+            </button>
+          </div>
+        </div>
+        <div class="accentlinepage1"></div>
+      </header>
+      <br />
+      <br />
+      <h1 class="header1page1">My Productivity Dashboard</h1>
+      <br />
+      <p class="intropage1">
+        Plan your studies. Track your tasks. Stay organised.
+      </p>
+      <br />
+      <p class="welcomemessagepage1">Welcome back, Student!</p>
+      <br />
+      <div class="statisticsbox1">
+        <h2 class="statisticsbox1heading">Your Statistics</h2>
+        <br />
+        <br />
+        <div class="statisticscards">
+          <div class="statisticsbox2">
+            <h2 class="statisticsboxheading2">Total Tasks</h2>
+            <h2 class="statisticsboxheading2totaltasks">0</h2>
+          </div>
+          <div class="statisticsbox2">
+            <h2 class="statisticsboxheading2">Completed</h2>
+            <h2 class="statisticsboxheading2completedtasks">0</h2>
+          </div>
+          <div class="statisticsbox2">
+            <h2 class="statisticsboxheading2">Pending</h2>
+            <h2 class="statisticsboxheading2pendingtasks">0</h2>
+          </div>
+        </div>
+      </div>
+      <br />
+      <h2 class="quickactions">Quick Actions</h2>
+      <br />
+      <button class="managemytasks">+ Manage My Tasks</button>
+      <br />
+      <button class="aboutstudyspace">About StudySpace</button>
+      <br />
+      <br />
+      <div class="motivationbox">
+        <h2 class="h2motivationboxh2">Stay Consistent!</h2>
+        <p class="h2motivationnobp">
+          Small progress every day leads to big results.
+        </p>
+      </div>
+      <div class="accentline2page1"></div>
+      <footer>
+        <p class="footerpage1">StudySpace · Student Productivity Dashboard</p>
+      </footer>
+    </section>
+  </body>
+  <head>
+    <title>StudySpace Dashboard</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1b1428;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      section {
+        padding: 25px;
+      }
+
+      /* Header */
+
+      .headerpage1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        background-color: #241a35;
+        border-radius: 12px;
+      }
+
+      .headingpage1 {
+        color: white;
+        font-size: 26px;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      .navbuttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .headerhome,
+      .headermytasks,
+      .headerbaout {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .headerhome:hover,
+      .headermytasks:hover,
+      .headerbaout:hover {
+        background-color: hotpink;
+        color: #1b1428;
+        cursor: pointer;
+        transform: scale(1.03);
+      }
+
+      .headerhome {
+        color: pink;
+      }
+
+      .accentlinepage1 {
+        background-color: hotpink;
+        height: 4px;
+        width: 100%;
+        margin-top: 12px;
+        border-radius: 5px;
+      }
+
+      /* Main heading and introduction */
+
+      .header1page1 {
+        font-size: 32px;
+        font-weight: 800;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .intropage1 {
+        font-size: 16px;
+        color: lightgrey;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .welcomemessagepage1 {
+        color: pink;
+        font-size: 18px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      /* Statistics card */
+
+      .statisticsbox1 {
+        background-color: #29203c;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid pink;
+        margin: 25px auto;
+        transition: 0.3s;
+      }
+
+      .statisticsbox1:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+      }
+
+      .statisticsbox1heading {
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+        text-align: left;
+        margin-top: 0;
+      }
+
+      .statisticscards {
+        display: flex;
+        gap: 15px;
+      }
+
+      .statisticsbox2 {
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #1b1428;
+        border: 1px solid pink;
+        flex: 1;
+        transition: 0.3s;
+      }
+
+      .statisticsbox2:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+        transform: scale(1.03);
+      }
+
+      .statisticsboxheading2 {
+        color: lightgrey;
+        font-size: 16px;
+        font-weight: normal;
+      }
+
+      .statisticsboxheading2totaltasks,
+      .statisticsboxheading2completedtasks,
+      .statisticsboxheading2pendingtasks {
+        color: pink;
+        font-size: 30px;
+        font-weight: 800;
+      }
+
+      /* Quick Actions */
+
+      .quickactions {
+        color: white;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 25px;
+      }
+
+      .managemytasks,
+      .aboutstudyspace {
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 5px;
+      }
+
+      .managemytasks {
+        background-color: pink;
+        color: #1b1428;
+        border: none;
+      }
+
+      .managemytasks:hover {
+        background-color: hotpink;
+        transform: scale(1.03);
+      }
+
+      .aboutstudyspace {
+        background-color: transparent;
+        color: pink;
+        border: 1px solid pink;
+      }
+
+      .aboutstudyspace:hover {
+        background-color: hotpink;
+        color: #1b1428;
+        transform: scale(1.03);
+      }
+
+      /* Motivation card */
+
+      .motivationbox {
+        background-color: #29203c;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid pink;
+        margin: 25px auto;
+        transition: 0.3s;
+      }
+
+      .motivationbox:hover {
+        background-color: #301934;
+        box-shadow: 5px 5px 5px grey;
+        transform: scale(1.01);
+      }
+
+      .h2motivationboxh2 {
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .h2motivationnobp {
+        color: lightgrey;
+        font-size: 16px;
+      }
+
+      /* Footer */
+
+      .accentline2page1 {
+        background-color: grey;
+        height: 1px;
+        width: 100%;
+        margin-top: 40px;
+      }
+
+      .footerpage1 {
+        color: lightgrey;
+        font-size: 14px;
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 15px;
+      }
+
+      /* Smaller screens */
+
+      @media (max-width: 600px) {
+        section {
+          padding: 12px;
+        }
+
+        .headerpage1 {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .navbuttons {
+          gap: 5px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .statisticscards {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+</html>
